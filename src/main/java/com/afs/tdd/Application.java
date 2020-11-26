@@ -31,6 +31,9 @@ public class Application {
         if (direction.equals("N")){
             locationY+=1;
         }
+        else if (direction.equals("S")){
+            locationY-=1;
+        }
     }
 
     public int getLocationX() {
