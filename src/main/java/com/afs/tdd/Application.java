@@ -40,17 +40,11 @@ public class Application {
             }
         }
         else{
-            if(direction=="N"){
-                direction="W";
-            }
-            else if (direction=="W"){
-                direction="S";
-            }
-            else if (direction=="S"){
-                direction="E";
-            }
-            else {
-                direction="N";
+            switch (direction){
+                case "N":direction="W";break;
+                case "E":direction="N";break;
+                case "S":direction="E";break;
+                case "W":direction="S";break;
             }
         }
     }
