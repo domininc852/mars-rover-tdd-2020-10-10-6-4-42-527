@@ -37,6 +37,9 @@ public class Application {
         else if (direction.equals("E")){
             locationX+=1;
         }
+        else {
+            locationX-=1;
+        }
     }
 
     public int getLocationX() {
