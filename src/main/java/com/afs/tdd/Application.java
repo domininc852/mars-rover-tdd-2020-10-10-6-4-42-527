@@ -15,13 +15,13 @@ public class Application {
         this.direction = direction;
     }
     public void roverControl(String commands){
-        splitInructions(commands).forEach(this::excuteIntruction);
+        splitInstructions(commands).forEach(this::executeInstructions);
     }
 
-    private List<String> splitInructions(String commands) {
+    private List<String> splitInstructions(String commands) {
         return Arrays.asList(commands.split(""));
     }
-    private void excuteIntruction(String command){
+    private void executeInstructions(String command){
         if (command.equals("M")){
             moveForward();
         }
