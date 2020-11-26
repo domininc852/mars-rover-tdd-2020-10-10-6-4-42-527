@@ -49,6 +49,9 @@ public class Application {
             else if (direction=="S"){
                 direction="E";
             }
+            else {
+                direction="N";
+            }
         }
     }
 
