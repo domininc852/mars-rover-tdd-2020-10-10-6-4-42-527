@@ -39,6 +39,11 @@ public class Application {
                 case "W":direction="N";break;
             }
         }
+        else{
+            if(direction=="N"){
+                direction="W";
+            }
+        }
     }
 
     private void moveForward() {
