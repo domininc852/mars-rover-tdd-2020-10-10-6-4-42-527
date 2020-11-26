@@ -191,13 +191,13 @@ class DemoTest {
         Application marsRover = new Application(0, 0, "N");
         MoveForward moveForwardInstruction = new MoveForward(marsRover);
         turnLeft turnLeftInstruction = new turnLeft(marsRover);
-        turnRight turnRightIntsruction = new turnRight(marsRover);
+        turnRight turnRightInstruction = new turnRight(marsRover);
         Instructions instructions = new Instructions();
         //when
         instructions.addInstruction(moveForwardInstruction);
         instructions.addInstruction(turnLeftInstruction);
         instructions.addInstruction(moveForwardInstruction);
-        instructions.addInstruction(turnRightIntsruction);
+        instructions.addInstruction(turnRightInstruction);
         instructions.executeInstructions();
         //then
         assertEquals(-1, marsRover.getLocationX());
