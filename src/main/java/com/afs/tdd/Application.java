@@ -40,6 +40,9 @@ public class Application {
         else if ((direction=="S")&&(command=="R")){
             direction="W";
         }
+        else{
+            direction="N";
+        }
     }
 
     private void moveForward() {
