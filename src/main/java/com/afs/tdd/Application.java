@@ -22,8 +22,17 @@ public class Application {
         return Arrays.asList(commands.split(""));
     }
     private void excuteIntruction(String command){
-
+        if (command.equals("M")){
+            moveForward();
+        }
     }
+
+    private void moveForward() {
+        if (direction.equals("N")){
+            locationY+=1;
+        }
+    }
+
     public int getLocationX() {
         return locationX;
     }
