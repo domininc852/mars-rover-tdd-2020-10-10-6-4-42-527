@@ -29,4 +29,16 @@ class DemoTest {
         assertEquals(-1,marsRover.getLocationY());
         assertEquals("S",marsRover.getDirection());
     }
+    @Test
+    public void should_return_x_plus_1_when_command_is_M_given_0_0_E(){
+        //given
+        Application marsRover=new Application(0,0,"E");
+        String commands ="M";
+        //when
+        marsRover.roverControl(commands);
+        //then
+        assertEquals(1,marsRover.getLocationX());
+        assertEquals(0,marsRover.getLocationY());
+        assertEquals("E",marsRover.getDirection());
+    }
 }
