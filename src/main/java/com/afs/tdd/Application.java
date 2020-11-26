@@ -31,17 +31,13 @@ public class Application {
     }
 
     private void turnDirection(String command) {
-        if ((direction=="N")&&(command=="R")){
-            direction="E";
-        }
-        else if ((direction=="E")&&(command=="R")){
-            direction="S";
-        }
-        else if ((direction=="S")&&(command=="R")){
-            direction="W";
-        }
-        else{
-            direction="N";
+        if (command=="R"){
+            switch (direction){
+                case "N":direction="E";break;
+                case "E":direction="S";break;
+                case "S":direction="W";break;
+                case "W":direction="N";break;
+            }
         }
     }
 
