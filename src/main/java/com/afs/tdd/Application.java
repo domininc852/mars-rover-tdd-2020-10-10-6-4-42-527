@@ -28,17 +28,12 @@ public class Application {
     }
 
     private void moveForward() {
-        if (direction.equals("N")){
-            locationY+=1;
-        }
-        else if (direction.equals("S")){
-            locationY-=1;
-        }
-        else if (direction.equals("E")){
-            locationX+=1;
-        }
-        else {
-            locationX-=1;
+        switch(direction){
+            case "N":locationY+=1;break;
+            case "S":locationY-=1;break;
+            case "E":locationX+=1;break;
+            case "W":locationX-=1;break;
+
         }
     }
 
