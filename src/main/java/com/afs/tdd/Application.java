@@ -25,6 +25,15 @@ public class Application {
         if (command.equals("M")){
             moveForward();
         }
+        else{
+            turnDirection(command);
+        }
+    }
+
+    private void turnDirection(String command) {
+        if ((direction=="N")&&(command=="R")){
+            direction="E";
+        }
     }
 
     private void moveForward() {
