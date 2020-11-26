@@ -149,4 +149,16 @@ class DemoTest {
         assertEquals(0,marsRover.getLocationY());
         assertEquals("N",marsRover.getDirection());
     }
+    @Test
+    public void should_return_minus_1_1_N_when_command_is_M_L_M_R_given_0_0_N(){
+        //given
+        Application marsRover=new Application(0,0,"N");
+        String commands ="MLMR";
+        //when
+        marsRover.roverControl(commands);
+        //then
+        assertEquals(-1,marsRover.getLocationX());
+        assertEquals(1,marsRover.getLocationY());
+        assertEquals("N",marsRover.getDirection());
+    }
 }
