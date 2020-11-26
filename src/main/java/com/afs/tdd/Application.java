@@ -37,6 +37,9 @@ public class Application {
         else if ((direction=="E")&&(command=="R")){
             direction="S";
         }
+        else if ((direction=="S")&&(command=="R")){
+            direction="W";
+        }
     }
 
     private void moveForward() {
