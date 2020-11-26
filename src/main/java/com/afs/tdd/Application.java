@@ -31,7 +31,7 @@ public class Application {
     }
 
     private void turnDirection(String command) {
-        if (command=="R"){
+        if (command.equals("R")){
             switch (direction){
                 case "N":direction="E";break;
                 case "E":direction="S";break;
