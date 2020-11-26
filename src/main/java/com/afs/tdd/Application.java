@@ -15,30 +15,6 @@ public class Application {
         this.direction = direction;
     }
 
-    public void roverControl(String commands) {
-        splitInstructions(commands).forEach(this::executeInstructions);
-    }
-
-    private List<String> splitInstructions(String commands) {
-        return Arrays.asList(commands.split(""));
-    }
-
-    private void executeInstructions(String command) {
-        if (command.equals("M")) {
-            moveForward();
-        } else {
-            turnDirection(command);
-        }
-    }
-
-    public void turnDirection(String command) {
-        if (command.equals("R")) {
-            turnRight();
-        } else {
-            turnLeft();
-        }
-    }
-
     public void turnLeft() {
         switch (direction) {
             case "N":
