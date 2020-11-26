@@ -1,8 +1,5 @@
 package com.afs.tdd;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class Application {
     private int locationX;
     private int locationY;
