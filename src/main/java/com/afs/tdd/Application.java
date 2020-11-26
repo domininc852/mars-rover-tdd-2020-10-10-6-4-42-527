@@ -14,47 +14,79 @@ public class Application {
         this.locationY = locationY;
         this.direction = direction;
     }
-    public void roverControl(String commands){
+
+    public void roverControl(String commands) {
         splitInstructions(commands).forEach(this::executeInstructions);
     }
 
     private List<String> splitInstructions(String commands) {
         return Arrays.asList(commands.split(""));
     }
-    private void executeInstructions(String command){
-        if (command.equals("M")){
+
+    private void executeInstructions(String command) {
+        if (command.equals("M")) {
             moveForward();
-        }
-        else{
+        } else {
             turnDirection(command);
         }
     }
 
-    private void turnDirection(String command) {
-        if (command.equals("R")){
-            switch (direction){
-                case "N":direction="E";break;
-                case "E":direction="S";break;
-                case "S":direction="W";break;
-                case "W":direction="N";break;
-            }
-        }
-        else{
-            switch (direction){
-                case "N":direction="W";break;
-                case "E":direction="N";break;
-                case "S":direction="E";break;
-                case "W":direction="S";break;
-            }
+    public void turnDirection(String command) {
+        if (command.equals("R")) {
+            turnRight();
+        } else {
+            turnLeft();
         }
     }
 
-    private void moveForward() {
-        switch(direction){
-            case "N":locationY+=1;break;
-            case "S":locationY-=1;break;
-            case "E":locationX+=1;break;
-            case "W":locationX-=1;break;
+    public void turnLeft() {
+        switch (direction) {
+            case "N":
+                direction = "W";
+                break;
+            case "E":
+                direction = "N";
+                break;
+            case "S":
+                direction = "E";
+                break;
+            case "W":
+                direction = "S";
+                break;
+        }
+    }
+
+    public void turnRight() {
+        switch (direction) {
+            case "N":
+                direction = "E";
+                break;
+            case "E":
+                direction = "S";
+                break;
+            case "S":
+                direction = "W";
+                break;
+            case "W":
+                direction = "N";
+                break;
+        }
+    }
+
+    public void moveForward() {
+        switch (direction) {
+            case "N":
+                locationY += 1;
+                break;
+            case "S":
+                locationY -= 1;
+                break;
+            case "E":
+                locationX += 1;
+                break;
+            case "W":
+                locationX -= 1;
+                break;
 
         }
     }
