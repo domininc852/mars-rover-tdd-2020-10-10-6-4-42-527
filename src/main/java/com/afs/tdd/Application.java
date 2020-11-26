@@ -43,6 +43,9 @@ public class Application {
             if(direction=="N"){
                 direction="W";
             }
+            else if (direction=="W"){
+                direction="S";
+            }
         }
     }
 
