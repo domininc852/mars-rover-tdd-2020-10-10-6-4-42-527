@@ -4,6 +4,10 @@ public class Application {
     private int locationX;
     private int locationY;
     private String direction;
+    private final String WEST ="W";
+    private final String EAST ="E";
+    private final String SOUTH ="S";
+    private final String NORTH ="N";
 
     public Application(int locationX, int locationY, String direction) {
 
@@ -14,50 +18,50 @@ public class Application {
 
     public void turnLeft() {
         switch (direction) {
-            case "N":
-                direction = "W";
+            case NORTH:
+                direction = WEST;
                 break;
-            case "E":
-                direction = "N";
+            case EAST:
+                direction = NORTH;
                 break;
-            case "S":
-                direction = "E";
+            case SOUTH:
+                direction = EAST;
                 break;
-            case "W":
-                direction = "S";
+            case WEST:
+                direction = SOUTH;
                 break;
         }
     }
 
     public void turnRight() {
         switch (direction) {
-            case "N":
-                direction = "E";
+            case NORTH:
+                direction = EAST;
                 break;
-            case "E":
-                direction = "S";
+            case EAST:
+                direction = SOUTH;
                 break;
-            case "S":
-                direction = "W";
+            case SOUTH:
+                direction = WEST;
                 break;
-            case "W":
-                direction = "N";
+            case WEST:
+                direction = NORTH;
                 break;
         }
     }
 
     public void moveForward() {
         switch (direction) {
-            case "N":
+            case NORTH:
                 locationY += 1;
                 break;
-            case "S":
+            case SOUTH:
                 locationY -= 1;
                 break;
-            case "E":
+            case EAST:
                 locationX += 1;
                 break;
-            case "W":
+            case WEST:
                 locationX -= 1;
                 break;
 
