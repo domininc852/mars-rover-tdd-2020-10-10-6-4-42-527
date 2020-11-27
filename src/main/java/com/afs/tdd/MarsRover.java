@@ -1,6 +1,6 @@
 package com.afs.tdd;
 
-public class Application {
+public class MarsRover {
     private int locationX;
     private int locationY;
     private String direction;
@@ -9,7 +9,7 @@ public class Application {
     private final String SOUTH ="S";
     private final String NORTH ="N";
 
-    public Application(int locationX, int locationY, String direction) {
+    public MarsRover(int locationX, int locationY, String direction) {
 
         this.locationX = locationX;
         this.locationY = locationY;

@@ -1,15 +1,14 @@
 package com.afs.tdd;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Instructions {
     private List<Command> instructions = new ArrayList<>();
-    private Application marsRover;
+    private MarsRover marsRover;
 
-    public Instructions(Application marsRover) {
+    public Instructions(MarsRover marsRover) {
         this.marsRover = marsRover;
     }
 
