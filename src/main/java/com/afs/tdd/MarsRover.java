@@ -4,10 +4,10 @@ public class MarsRover {
     private int locationX;
     private int locationY;
     private String direction;
-    private final String WEST ="W";
-    private final String EAST ="E";
-    private final String SOUTH ="S";
-    private final String NORTH ="N";
+    private final String WEST = "W";
+    private final String EAST = "E";
+    private final String SOUTH = "S";
+    private final String NORTH = "N";
 
     public MarsRover(int locationX, int locationY, String direction) {
 
