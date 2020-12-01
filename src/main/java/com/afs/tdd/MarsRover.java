@@ -8,14 +8,15 @@ public class MarsRover {
         this.locationInformation = locationInformation;
     }
 
-    public void moveForward(){
+    void moveForward() {
         this.locationInformation.moveForward();
     }
 
-    public void turnRight(){
+    void turnRight() {
         this.locationInformation.turnRight();
     }
-    public void turnLeft(){
+
+    void turnLeft() {
         this.locationInformation.turnLeft();
     }
 

@@ -3,52 +3,49 @@ package com.afs.tdd;
 public class LocationInformation {
     private int locationX;
     private int locationY;
-    private String direction;
-    private final String WEST = "W";
-    private final String EAST = "E";
-    private final String SOUTH = "S";
-    private final String NORTH = "N";
+    private Direction direction;
 
-    public LocationInformation(int locationX, int locationY, String direction) {
+    public LocationInformation(int locationX, int locationY, Direction direction) {
         this.locationX = locationX;
         this.locationY = locationY;
         this.direction = direction;
     }
-    public void turnLeft() {
+
+    void turnLeft() {
         switch (direction) {
             case NORTH:
-                direction = WEST;
+                direction = Direction.WEST;
                 break;
             case EAST:
-                direction = NORTH;
+                direction = Direction.NORTH;
                 break;
             case SOUTH:
-                direction = EAST;
+                direction = Direction.EAST;
                 break;
             case WEST:
-                direction = SOUTH;
+                direction = Direction.SOUTH;
                 break;
         }
     }
 
-    public void turnRight() {
+    void turnRight() {
         switch (direction) {
             case NORTH:
-                direction = EAST;
+                direction = Direction.EAST;
                 break;
             case EAST:
-                direction = SOUTH;
+                direction = Direction.SOUTH;
                 break;
             case SOUTH:
-                direction = WEST;
+                direction = Direction.WEST;
                 break;
             case WEST:
-                direction = NORTH;
+                direction = Direction.NORTH;
                 break;
         }
     }
 
-    public void moveForward() {
+    void moveForward() {
         switch (direction) {
             case NORTH:
                 locationY += 1;
@@ -66,27 +63,15 @@ public class LocationInformation {
         }
     }
 
-    public int getLocationX() {
-        return locationX;
-    }
-
-    public int getLocationY() {
-        return locationY;
-    }
-
-    public String getDirection() {
-        return direction;
-    }
-
     @Override
     public boolean equals(Object obj) {
-        if(obj==null){
+        if (obj == null) {
             return false;
         }
-        if(obj.getClass() != this.getClass()){
+        if (obj.getClass() != this.getClass()) {
             return false;
         }
-        LocationInformation other=(LocationInformation)obj;
-        return this.locationX==other.locationX&&this.locationY==other.locationY&&this.direction.equals(other.direction);
+        LocationInformation other = (LocationInformation) obj;
+        return this.locationX == other.locationX && this.locationY == other.locationY && this.direction.equals(other.direction);
     }
 }
