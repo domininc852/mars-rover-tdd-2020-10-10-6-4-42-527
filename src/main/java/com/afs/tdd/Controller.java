@@ -7,7 +7,7 @@ import java.util.List;
 public class Controller {
     private static final String MOVE_FORWARD_COMMAND = "M";
     private static final String TURN_LEFT_COMMAND = "L";
-    private List<Command> instructions = new ArrayList<>();
+    private List<Command> commands = new ArrayList<>();
     private MarsRover marsRover;
 
 
@@ -19,17 +19,17 @@ public class Controller {
         Arrays.asList(commands.split("")).
                 forEach(command -> {
                     if (command.equals(MOVE_FORWARD_COMMAND)) {
-                        instructions.add(new MoveForward());
+                        this.commands.add(new MoveForward());
                     } else if (command.equals(TURN_LEFT_COMMAND)) {
-                        instructions.add(new TurnLeft());
+                        this.commands.add(new TurnLeft());
                     } else {
-                        instructions.add(new TurnRight());
+                        this.commands.add(new TurnRight());
                     }
                 });
     }
 
-    public void executeInstructions() {
-        instructions.forEach(instruction -> instruction.execute(marsRover));
-        instructions.clear();
+    public void executeCommands() {
+        commands.forEach(instruction -> instruction.execute(marsRover));
+        commands.clear();
     }
 }

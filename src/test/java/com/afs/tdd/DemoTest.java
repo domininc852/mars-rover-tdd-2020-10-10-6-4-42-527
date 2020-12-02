@@ -2,9 +2,6 @@ package com.afs.tdd;
 
 import org.junit.jupiter.api.Test;
 
-import java.net.Socket;
-import java.util.Dictionary;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DemoTest {
@@ -20,7 +17,7 @@ class DemoTest {
         Controller controller = new Controller(marsRover);
         //when
         controller.receiveInstructions(MOVE_FORWARD_COMMAND);
-        controller.executeInstructions();
+        controller.executeCommands();
         //then
         assertEquals(new LocationInformation(0, 1, Direction.NORTH), marsRover.getLocationInformation());
     }
@@ -32,7 +29,7 @@ class DemoTest {
         Controller controller = new Controller(marsRover);
         //when
         controller.receiveInstructions(MOVE_FORWARD_COMMAND);
-        controller.executeInstructions();
+        controller.executeCommands();
         //then
         assertEquals(new LocationInformation(0, -1, Direction.SOUTH), marsRover.getLocationInformation());
     }
@@ -44,7 +41,7 @@ class DemoTest {
         Controller controller = new Controller(marsRover);
         //when
         controller.receiveInstructions(MOVE_FORWARD_COMMAND);
-        controller.executeInstructions();
+        controller.executeCommands();
         //then
         assertEquals(new LocationInformation(1, 0, Direction.EAST), marsRover.getLocationInformation());
     }
@@ -56,7 +53,7 @@ class DemoTest {
         Controller controller = new Controller(marsRover);
         //when
         controller.receiveInstructions(MOVE_FORWARD_COMMAND);
-        controller.executeInstructions();
+        controller.executeCommands();
         //then
         assertEquals(new LocationInformation(-1, 0, Direction.WEST), marsRover.getLocationInformation());
     }
@@ -68,7 +65,7 @@ class DemoTest {
         Controller controller = new Controller(marsRover);
         //when
         controller.receiveInstructions(TURN_RIGHT_COMMAND);
-        controller.executeInstructions();
+        controller.executeCommands();
         //then
         assertEquals(new LocationInformation(0, 0, Direction.EAST), marsRover.getLocationInformation());
     }
@@ -80,7 +77,7 @@ class DemoTest {
         Controller controller = new Controller(marsRover);
         //when
         controller.receiveInstructions(TURN_RIGHT_COMMAND);
-        controller.executeInstructions();
+        controller.executeCommands();
         //then
         assertEquals(new LocationInformation(0, 0, Direction.SOUTH), marsRover.getLocationInformation());
     }
@@ -92,7 +89,7 @@ class DemoTest {
         Controller controller = new Controller(marsRover);
         //when
         controller.receiveInstructions(TURN_RIGHT_COMMAND);
-        controller.executeInstructions();
+        controller.executeCommands();
         //then
         assertEquals(new LocationInformation(0, 0, Direction.WEST), marsRover.getLocationInformation());
     }
@@ -104,7 +101,7 @@ class DemoTest {
         Controller controller = new Controller(marsRover);
         //when
         controller.receiveInstructions(TURN_RIGHT_COMMAND);
-        controller.executeInstructions();
+        controller.executeCommands();
         //then
         assertEquals(new LocationInformation(0, 0, Direction.NORTH), marsRover.getLocationInformation());
     }
@@ -116,7 +113,7 @@ class DemoTest {
         Controller controller = new Controller(marsRover);
         //when
         controller.receiveInstructions(TURN_LEFT_COMMAND);
-        controller.executeInstructions();
+        controller.executeCommands();
         //then
         assertEquals(new LocationInformation(0, 0, Direction.WEST), marsRover.getLocationInformation());
     }
@@ -128,7 +125,7 @@ class DemoTest {
         Controller controller = new Controller(marsRover);
         //when
         controller.receiveInstructions(TURN_LEFT_COMMAND);
-        controller.executeInstructions();
+        controller.executeCommands();
         //then
         assertEquals(new LocationInformation(0, 0, Direction.SOUTH), marsRover.getLocationInformation());
     }
@@ -140,7 +137,7 @@ class DemoTest {
         Controller controller = new Controller(marsRover);
         //when
         controller.receiveInstructions(TURN_LEFT_COMMAND);
-        controller.executeInstructions();
+        controller.executeCommands();
         //then
         assertEquals(new LocationInformation(0, 0, Direction.EAST), marsRover.getLocationInformation());
     }
@@ -152,7 +149,7 @@ class DemoTest {
         Controller controller = new Controller(marsRover);
         //when
         controller.receiveInstructions(TURN_LEFT_COMMAND);
-        controller.executeInstructions();
+        controller.executeCommands();
         //then
         assertEquals(new LocationInformation(0, 0, Direction.NORTH), marsRover.getLocationInformation());
     }
@@ -164,7 +161,7 @@ class DemoTest {
         Controller controller = new Controller(marsRover);
         //when
         controller.receiveInstructions(MOVE_FORWARD_COMMAND + TURN_LEFT_COMMAND + MOVE_FORWARD_COMMAND + TURN_RIGHT_COMMAND);
-        controller.executeInstructions();
+        controller.executeCommands();
         //then
         assertEquals(new LocationInformation(-1, 1, Direction.NORTH), marsRover.getLocationInformation());
     }
