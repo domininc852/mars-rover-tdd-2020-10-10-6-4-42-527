@@ -21,9 +21,9 @@ public class Controller {
                     if (command.equals(MOVE_FORWARD_COMMAND)) {
                         instructions.add(new MoveForward());
                     } else if (command.equals(TURN_LEFT_COMMAND)) {
-                        instructions.add(new turnLeft());
+                        instructions.add(new TurnLeft());
                     } else {
-                        instructions.add(new turnRight());
+                        instructions.add(new TurnRight());
                     }
                 });
     }

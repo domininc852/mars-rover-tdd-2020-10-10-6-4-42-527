@@ -12,10 +12,6 @@ class DemoTest {
     private static final String MOVE_FORWARD_COMMAND = "M";
     private static final String TURN_LEFT_COMMAND = "L";
     private static final String TURN_RIGHT_COMMAND = "R";
-    private final String WEST = "W";
-    private final String EAST = "E";
-    private final String SOUTH = "S";
-    private final String NORTH = "N";
 
     @Test
     void should_return_y_plus_1_when_command_is_M_given_0_0_N() {

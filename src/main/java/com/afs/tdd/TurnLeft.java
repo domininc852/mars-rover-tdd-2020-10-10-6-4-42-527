@@ -1,10 +1,10 @@
 package com.afs.tdd;
 
-public class turnRight implements Command {
+public class TurnLeft implements Command {
 
 
     @Override
     public void execute(MarsRover marsRover) {
-        marsRover.turnRight();
+        marsRover.turnLeft();
     }
 }
